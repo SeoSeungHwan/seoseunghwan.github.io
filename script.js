@@ -105,6 +105,11 @@ const alcoholItems = [
     meta: "",
     tag: "",
   },
+  {
+    name: "소주",
+    meta: "",
+    tag: "",
+  },
 ];
 
 const bestGrid = document.querySelector("#best-grid");
