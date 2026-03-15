@@ -103,6 +103,11 @@ body {
   color: var(--muted);
 }
 
+.poster-copy-indent {
+  display: inline-block;
+  padding-left: 1.6em;
+}
+
 .best-section {
   margin-top: 34px;
 }
@@ -254,6 +259,10 @@ body {
 
   .poster-copy {
     font-size: 1.2rem;
+  }
+
+  .poster-copy-indent {
+    padding-left: 1.2em;
   }
 
   .poster-header h1 {

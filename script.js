@@ -18,18 +18,13 @@ const drinkItems = [
     tag: "+300원",
   },
   {
-    name: "제로콜라",
-    meta: "",
-    tag: "",
-  },
-  {
-    name: "제로사이다",
-    meta: "",
-    tag: "",
-  },
-  {
     name: "드립커피",
     meta: "",
+    tag: "",
+  },
+  {
+    name: "카페라떼",
+    meta: "아이스만 가능",
     tag: "",
   },
   {
@@ -48,13 +43,8 @@ const drinkItems = [
     tag: "",
   },
   {
-    name: "매실차",
+    name: "메실차",
     meta: "",
-    tag: "",
-  },
-  {
-    name: "라떼",
-    meta: "아이스만 가능",
     tag: "",
   },
   {
@@ -62,11 +52,26 @@ const drinkItems = [
     meta: "",
     tag: "",
   },
+  {
+    name: "제로콜라",
+    meta: "",
+    tag: "",
+  },
+  {
+    name: "제로사이다",
+    meta: "",
+    tag: "",
+  },
 ];
 
 const alcoholItems = [
   {
-    name: "모히또",
+    name: "소주",
+    meta: "",
+    tag: "",
+  },
+  {
+    name: "맥주",
     meta: "",
     tag: "",
   },
@@ -76,7 +81,7 @@ const alcoholItems = [
     tag: "",
   },
   {
-    name: "맥주",
+    name: "모히또",
     meta: "",
     tag: "",
   },
@@ -102,11 +107,6 @@ const alcoholItems = [
   },
   {
     name: "사케",
-    meta: "",
-    tag: "",
-  },
-  {
-    name: "소주",
     meta: "",
     tag: "",
   },
