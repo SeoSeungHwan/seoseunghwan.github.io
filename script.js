@@ -1,103 +1,135 @@
-const menuItems = [
+const bestItems = [
   {
-    name: "콜라",
-    category: "soft",
-    label: "음료",
-    price: "무료",
-    description: "차갑게 준비된 기본 탄산. 얼음이랑 같이 가능.",
+    name: "블루베리라떼",
+    icon: "🫐",
+    note: "달콤하고 부드럽게 마시기 좋은 오늘의 추천 메뉴",
   },
   {
-    name: "제로 콜라",
-    category: "soft",
-    label: "음료",
-    price: "무료",
-    description: "가볍게 마시기 좋은 무설탕 탄산.",
-  },
-  {
-    name: "오렌지 주스",
-    category: "soft",
-    label: "음료",
-    price: "무료",
-    description: "술이랑 같이 마시기 좋은 상큼한 선택.",
-  },
-  {
-    name: "라거 맥주",
-    category: "beer",
-    label: "맥주",
-    price: "차갑게",
-    description: "가볍고 시원하게 넘어가는 기본 맥주.",
-  },
-  {
-    name: "IPA 맥주",
-    category: "beer",
-    label: "맥주",
-    price: "차갑게",
-    description: "향이 진하고 쌉쌀한 맛 좋아하면 추천.",
-  },
-  {
-    name: "하이볼",
-    category: "liquor",
-    label: "주류",
-    price: "추천",
-    description: "위스키와 탄산수로 산뜻하게 만들어드려요.",
-  },
-  {
-    name: "와인",
-    category: "liquor",
-    label: "주류",
-    price: "한 잔",
-    description: "레드 또는 화이트 중 있는 걸로 한 잔 가능.",
-  },
-  {
-    name: "소주",
-    category: "liquor",
-    label: "주류",
-    price: "기본",
-    description: "깔끔하게 마시기 좋은 클래식 선택.",
+    name: "모히또",
+    icon: "🍹",
+    note: "상큼하게 한 잔 마시기 좋은 집들이 시그니처 칵테일",
   },
 ];
 
-const menuGrid = document.querySelector("#menu-grid");
-const filterButtons = document.querySelectorAll(".filter-pill");
+const drinkItems = [
+  {
+    name: "아메리카노",
+    meta: "디카페인 변경 가능",
+    tag: "+300원",
+  },
+  {
+    name: "제로콜라",
+    meta: "",
+    tag: "",
+  },
+  {
+    name: "제로사이다",
+    meta: "",
+    tag: "",
+  },
+  {
+    name: "드립커피",
+    meta: "",
+    tag: "",
+  },
+  {
+    name: "블루베리라떼",
+    meta: "",
+    tag: "",
+  },
+  {
+    name: "딸기라떼",
+    meta: "",
+    tag: "",
+  },
+  {
+    name: "오미자",
+    meta: "",
+    tag: "",
+  },
+  {
+    name: "매실차",
+    meta: "",
+    tag: "",
+  },
+  {
+    name: "라떼",
+    meta: "아이스만 가능",
+    tag: "",
+  },
+  {
+    name: "일본녹차",
+    meta: "",
+    tag: "",
+  },
+];
 
-function createMenuCard(item) {
+const alcoholItems = [
+  {
+    name: "모히또",
+    meta: "",
+    tag: "",
+  },
+  {
+    name: "하이볼",
+    meta: "",
+    tag: "",
+  },
+  {
+    name: "맥주",
+    meta: "",
+    tag: "",
+  },
+  {
+    name: "레드와인",
+    meta: "",
+    tag: "",
+  },
+  {
+    name: "화이트와인",
+    meta: "",
+    tag: "",
+  },
+  {
+    name: "로제와인",
+    meta: "",
+    tag: "",
+  },
+];
+
+const bestGrid = document.querySelector("#best-grid");
+const drinkList = document.querySelector("#drink-list");
+const alcoholList = document.querySelector("#alcohol-list");
+
+function createBestCard(item) {
   const article = document.createElement("article");
-  article.className = "menu-card";
-  article.dataset.category = item.category;
-
+  article.className = "best-card";
   article.innerHTML = `
-    <div class="menu-card-header">
-      <span class="menu-badge ${item.category}">${item.label}</span>
-      <p class="menu-price">${item.price}</p>
-    </div>
-    <h3 class="menu-name">${item.name}</h3>
-    <p class="menu-description">${item.description}</p>
+    <span class="pick-badge">Pick</span>
+    <div class="best-icon" aria-hidden="true">${item.icon}</div>
+    <h3>${item.name}</h3>
+    <p class="best-note">${item.note}</p>
   `;
-
   return article;
 }
 
-function renderMenu() {
-  const cards = menuItems.map(createMenuCard);
-  menuGrid.replaceChildren(...cards);
+function createMenuItem(item) {
+  const listItem = document.createElement("li");
+  listItem.className = "menu-item";
+  listItem.innerHTML = `
+    <div>
+      <p class="menu-name">${item.name}</p>
+      ${item.meta ? `<p class="menu-meta">${item.meta}</p>` : ""}
+    </div>
+    ${item.tag ? `<span class="menu-tag">${item.tag}</span>` : ""}
+  `;
+  return listItem;
 }
 
-function setFilter(filter) {
-  const cards = document.querySelectorAll(".menu-card");
-
-  cards.forEach((card) => {
-    const matches = filter === "all" || card.dataset.category === filter;
-    card.classList.toggle("is-hidden", !matches);
-  });
-
-  filterButtons.forEach((button) => {
-    button.classList.toggle("is-active", button.dataset.filter === filter);
-  });
+function renderList(target, items) {
+  target.replaceChildren(...items.map(createMenuItem));
 }
 
-filterButtons.forEach((button) => {
-  button.addEventListener("click", () => setFilter(button.dataset.filter));
-});
-
-renderMenu();
-setFilter("all");
+bestGrid.replaceChildren(...bestItems.map(createBestCard));
+renderList(drinkList, drinkItems);
+renderList(alcoholList, alcoholItems);

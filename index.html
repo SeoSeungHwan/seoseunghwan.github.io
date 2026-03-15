@@ -3,56 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>우리집 바 메뉴</title>
+    <title>집들이 메뉴판</title>
     <meta
       name="description"
-      content="QR로 열어보는 집들이 음료 & 술 메뉴판"
+      content="QR로 열어보는 집들이 음료와 술 메뉴판"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=SUIT:wght@400;500;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Nanum+Myeongjo:wght@400;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main class="page">
-      <section class="hero">
-        <p class="eyebrow">HOUSEWARMING MENU</p>
-        <h1>환영해, 오늘은<br />우리집 미니 바 오픈</h1>
-        <p class="hero-copy">
-          마시고 싶은 메뉴를 골라주세요. 편하게 말해주면 바로 준비할게요.
-        </p>
-        <div class="hero-note">
-          <span>주문 방법</span>
-          <p>메뉴 이름을 말하거나 화면 보여주기</p>
-        </div>
-      </section>
+      <section class="poster">
+        <span class="tape tape-left" aria-hidden="true"></span>
+        <span class="tape tape-right" aria-hidden="true"></span>
 
-      <section class="quick-filters" aria-label="메뉴 카테고리">
-        <button class="filter-pill is-active" data-filter="all">전체</button>
-        <button class="filter-pill" data-filter="soft">음료</button>
-        <button class="filter-pill" data-filter="beer">맥주</button>
-        <button class="filter-pill" data-filter="liquor">주류</button>
-      </section>
+        <header class="poster-header">
+          <p class="poster-kicker">House Warming Menu</p>
+          <h1>오늘의 집들이 메뉴판</h1>
+          <p class="poster-copy">
+            마시고 싶은 메뉴를 골라서 말해주세요. 천천히 준비해드릴게요.
+          </p>
+        </header>
 
-      <section class="menu-section">
-        <div class="section-head">
-          <div>
-            <p class="section-label">MENU</p>
-            <h2>오늘 준비된 것들</h2>
+        <section class="best-section" aria-labelledby="best-title">
+          <div class="section-intro">
+            <h2 id="best-title">Best</h2>
+            <p>오늘 추천하는 메뉴</p>
           </div>
-          <p class="section-tip">취향 따라 골라봐요</p>
-        </div>
-        <div id="menu-grid" class="menu-grid"></div>
-      </section>
+          <div id="best-grid" class="best-grid"></div>
+        </section>
 
-      <section class="footer-card">
-        <p class="footer-title">한 마디</p>
-        <p class="footer-copy">
-          물, 얼음, 잔, 안주도 있으니 필요하면 편하게 말해주세요.
-        </p>
+        <div class="divider" aria-hidden="true"></div>
+
+        <section class="menu-columns" aria-label="전체 메뉴">
+          <section class="menu-group">
+            <div class="group-head">
+              <h2>Drink</h2>
+              <p>음료</p>
+            </div>
+            <ul id="drink-list" class="menu-list"></ul>
+          </section>
+
+          <section class="menu-group">
+            <div class="group-head">
+              <h2>Alcohol</h2>
+              <p>술</p>
+            </div>
+            <ul id="alcohol-list" class="menu-list"></ul>
+          </section>
+        </section>
+
+        <footer class="poster-footer">
+          <h2>Note</h2>
+          <p>
+            디카페인 변경, 얼음, 잔, 와인 종류는 편하게 물어봐주세요.
+          </p>
+        </footer>
       </section>
     </main>
 
