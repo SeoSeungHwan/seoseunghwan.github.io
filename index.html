@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>우리집 바 메뉴</title>
+    <meta
+      name="description"
+      content="QR로 열어보는 집들이 음료 & 술 메뉴판"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=SUIT:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <p class="eyebrow">HOUSEWARMING MENU</p>
+        <h1>환영해, 오늘은<br />우리집 미니 바 오픈</h1>
+        <p class="hero-copy">
+          마시고 싶은 메뉴를 골라주세요. 편하게 말해주면 바로 준비할게요.
+        </p>
+        <div class="hero-note">
+          <span>주문 방법</span>
+          <p>메뉴 이름을 말하거나 화면 보여주기</p>
+        </div>
+      </section>
+
+      <section class="quick-filters" aria-label="메뉴 카테고리">
+        <button class="filter-pill is-active" data-filter="all">전체</button>
+        <button class="filter-pill" data-filter="soft">음료</button>
+        <button class="filter-pill" data-filter="beer">맥주</button>
+        <button class="filter-pill" data-filter="liquor">주류</button>
+      </section>
+
+      <section class="menu-section">
+        <div class="section-head">
+          <div>
+            <p class="section-label">MENU</p>
+            <h2>오늘 준비된 것들</h2>
+          </div>
+          <p class="section-tip">취향 따라 골라봐요</p>
+        </div>
+        <div id="menu-grid" class="menu-grid"></div>
+      </section>
+
+      <section class="footer-card">
+        <p class="footer-title">한 마디</p>
+        <p class="footer-copy">
+          물, 얼음, 잔, 안주도 있으니 필요하면 편하게 말해주세요.
+        </p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
