@@ -1,0 +1,22 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#E8DCC5"/>
+  <rect x="124" y="62" width="952" height="506" rx="10" fill="#FFFDF8"/>
+  <rect x="92" y="40" width="120" height="42" rx="6" transform="rotate(-16 92 40)" fill="#F3E38C" fill-opacity="0.9"/>
+  <rect x="992" y="532" width="120" height="42" rx="6" transform="rotate(18 992 532)" fill="#F3E38C" fill-opacity="0.9"/>
+  <text x="600" y="165" text-anchor="middle" fill="#7B6757" font-family="'Nanum Myeongjo', serif" font-size="36" font-weight="700">House Warming Menu</text>
+  <text x="600" y="255" text-anchor="middle" fill="#2E221B" font-family="'Nanum Myeongjo', serif" font-size="72" font-weight="800">오늘의 집들이 메뉴판</text>
+  <text x="600" y="320" text-anchor="middle" fill="#6F6053" font-family="'Nanum Myeongjo', serif" font-size="30" font-weight="700">음료와 술 메뉴를 한눈에 보는 우리 집 메뉴</text>
+  <text x="220" y="410" fill="#2E221B" font-family="'Gaegu', cursive" font-size="52" font-weight="700">Drink</text>
+  <text x="220" y="458" fill="#6F6053" font-family="'Gaegu', cursive" font-size="34">아메리카노 · 제로콜라 · 블루베리라떼</text>
+  <text x="220" y="500" fill="#6F6053" font-family="'Gaegu', cursive" font-size="34">딸기라떼 · 오미자 · 일본녹차</text>
+  <text x="715" y="410" fill="#2E221B" font-family="'Gaegu', cursive" font-size="52" font-weight="700">Alcohol</text>
+  <text x="715" y="458" fill="#6F6053" font-family="'Gaegu', cursive" font-size="34">모히또 · 하이볼 · 맥주</text>
+  <text x="715" y="500" fill="#6F6053" font-family="'Gaegu', cursive" font-size="34">레드와인 · 화이트와인 · 로제와인</text>
+  <path d="M184 366C223 366 223 346 262 346C301 346 301 386 340 386C379 386 379 346 418 346C457 346 457 386 496 386C535 386 535 346 574 346C613 346 613 386 652 386C691 386 691 346 730 346C769 346 769 386 808 386C847 386 847 346 886 346C925 346 925 366 964 366" stroke="#A87440" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="965" cy="217" r="38" fill="#F6D5DE"/>
+  <path d="M942 235C942 219.536 954.536 207 970 207V207C985.464 207 998 219.536 998 235V244H942V235Z" fill="#D35B77"/>
+  <circle cx="949" cy="202" r="12" fill="#8B5A3C"/>
+  <rect x="215" y="186" width="48" height="92" rx="18" fill="#DDA05B"/>
+  <path d="M221 217C221 201.536 233.536 189 249 189V189C264.464 189 277 201.536 277 217V239H221V217Z" fill="#8A5A39"/>
+  <path d="M234 198C236.667 191 245 180.8 257 198" stroke="#FFF7EE" stroke-width="4" stroke-linecap="round"/>
+</svg>
