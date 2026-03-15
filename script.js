@@ -14,51 +14,61 @@ const bestItems = [
 const drinkItems = [
   {
     name: "아메리카노",
-    meta: "디카페인 변경 가능",
-    tag: "+300원",
+    note: "디카페인 변경 가능 +300원",
+    meta: "",
+    tag: "",
   },
   {
     name: "드립커피",
+    note: "",
     meta: "",
     tag: "",
   },
   {
     name: "카페라떼",
-    meta: "아이스만 가능",
+    note: "(Only Ice)",
+    meta: "",
     tag: "",
   },
   {
     name: "블루베리라떼",
+    note: "",
     meta: "",
     tag: "",
   },
   {
     name: "딸기라떼",
+    note: "",
     meta: "",
     tag: "",
   },
   {
     name: "오미자",
+    note: "",
     meta: "",
     tag: "",
   },
   {
     name: "메실차",
+    note: "",
     meta: "",
     tag: "",
   },
   {
     name: "일본녹차",
+    note: "",
     meta: "",
     tag: "",
   },
   {
     name: "제로콜라",
+    note: "",
     meta: "",
     tag: "",
   },
   {
     name: "제로사이다",
+    note: "",
     meta: "",
     tag: "",
   },
@@ -133,7 +143,9 @@ function createMenuItem(item) {
   listItem.className = "menu-item";
   listItem.innerHTML = `
     <div>
-      <p class="menu-name">${item.name}</p>
+      <p class="menu-name">
+        ${item.name}${item.note ? ` <span class="menu-inline-note">${item.note}</span>` : ""}
+      </p>
       ${item.meta ? `<p class="menu-meta">${item.meta}</p>` : ""}
     </div>
     ${item.tag ? `<span class="menu-tag">${item.tag}</span>` : ""}
