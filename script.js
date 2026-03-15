@@ -14,7 +14,7 @@ const bestItems = [
 const drinkItems = [
   {
     name: "아메리카노",
-    note: "디카페인 변경 가능 +300원",
+    note: "",
     meta: "",
     tag: "",
   },

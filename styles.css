@@ -193,6 +193,12 @@ body {
   margin-bottom: 14px;
 }
 
+.group-note {
+  margin: -6px 0 12px;
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
 .menu-list {
   margin: 0;
   padding: 0;
