@@ -81,6 +81,11 @@ const alcoholItems = [
     tag: "",
   },
   {
+    name: "위스키",
+    meta: "",
+    tag: "",
+  },
+  {
     name: "레드와인",
     meta: "",
     tag: "",
@@ -92,6 +97,11 @@ const alcoholItems = [
   },
   {
     name: "로제와인",
+    meta: "",
+    tag: "",
+  },
+  {
+    name: "사케",
     meta: "",
     tag: "",
   },
